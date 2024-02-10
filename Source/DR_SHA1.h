@@ -168,8 +168,10 @@
 #ifdef _MSC_VER
 #include <tchar.h>
 #else
-#ifndef TCHAR
-#define TCHAR char
+#ifndef _TCHAR_DEFINED
+#define _TCHAR_DEFINED
+typedef char TCHAR, *PTCHAR;
+typedef unsigned char TBYTE, *PTBYTE;
 #endif
 #ifndef _T
 #define _T(__x) (__x)
