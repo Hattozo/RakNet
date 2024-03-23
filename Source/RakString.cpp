@@ -458,7 +458,9 @@ WCHAR * RakString::ToWideChar(void)
 	if ( (sharedString->c_str == NULL) || (*sharedString->c_str == '\0') )
 	{
 		// Return empty string
-		return L"";
+		WCHAR var[1];
+		wprintf(L"", var);
+		return var;
 	}
 
 	//
